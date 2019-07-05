@@ -45,9 +45,6 @@ for epoch in np.arange(0, args["epochs"]):
 
     for (batchX, batchY) in next_batch(X, y, args["batch_size"]):
         preds = sigmoid_activation(batchX.dot(W))
-        print(batchY)
-        print(preds)
-        print('-----------------------------')
         error = preds - batchY
         epochLoss.append(np.sum(error ** 2))
 
